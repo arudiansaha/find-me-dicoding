@@ -1,0 +1,19 @@
+@mixin image-common {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+$images: 'sm' 256px, 'md' 512px, 'lg' 768px, 'xl' 1024px;
+
+@mixin image-size($value) {
+
+  @each $name,
+  $size in $images {
+    @if $value ==$name {
+      @include image-common();
+
+      height: $size;
+    }
+  }
+}

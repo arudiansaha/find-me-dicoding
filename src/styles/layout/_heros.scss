@@ -1,0 +1,17 @@
+@use '../base/images' as *;
+
+.hero {
+  display: block;
+
+  &__image {
+    @include image-size('sm');
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    &__image {
+      @include image-size('md')
+    }
+  }
+}
