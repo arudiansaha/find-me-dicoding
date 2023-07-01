@@ -1,8 +1,9 @@
 const ExpandContent = {
-  init({ button, content, icon }) {
+  init({ button, content, icon = null }) {
     button.addEventListener('click', (event) => {
       this._toggleContent(event, content);
-      this._toggleIcon(icon);
+
+      if (icon) this._toggleIcon(icon);
     });
   },
 

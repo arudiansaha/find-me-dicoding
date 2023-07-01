@@ -18,6 +18,11 @@
   @include set-colors('secondary');
 }
 
+@mixin button-custom($color) {
+  @include button-common();
+  @include set-colors($color);
+}
+
 @mixin button-square() {
   @include button-common();
   @include set-colors('background');

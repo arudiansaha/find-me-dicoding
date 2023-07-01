@@ -15,7 +15,7 @@ const Home = {
     navbarElement.title = 'Find Me';
 
     const restaurantListElement = document.querySelector('restaurant-list');
-    const restaurants = await RestaurantApi.restaurantList();
+    const restaurants = await RestaurantApi.getRestaurants();
     restaurantListElement.restaurants = restaurants;
     restaurantListElement.exploreTitle = 'Explore Restaurant';
   },
