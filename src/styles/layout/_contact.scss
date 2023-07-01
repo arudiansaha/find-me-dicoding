@@ -1,0 +1,61 @@
+@use '../base/colors' as *;
+@use '../base/typography' as *;
+@use '../components/buttons' as *;
+
+.contact {
+  @include set-colors('inverse');
+
+  display: block;
+  width: min(1024px, 100% - 3rem);
+  margin-block: 2rem;
+  margin-inline: auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  &__title {
+    @include font-size('xl');
+
+    margin-block: 0.5rem;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    width: 100%;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  &__button {
+    @include button-primary();
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:active {
+      filter: brightness(1.25);
+    }
+  }
+
+  &__copyright {
+    margin-block: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+
+    &__title,
+    &__form {
+      width: 60%;
+      margin-inline: auto;
+    }
+  }
+}
