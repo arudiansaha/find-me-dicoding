@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+@mixin font-size($value) {
+
+  @each $name,
+  $size,
+  $line-height in $font-sizes {
+    @if $name ==$value {
+      font-size: $size;
+      line-height: $line-height;
+    }
+  }
+}
+
+@mixin font-sans($value) {
+
+  @each $name,
+  $font,
+  $alt-font in $font-sans-family {
+    @if $name ==$value {
+      font-family: $font, $alt-font;
+    }
+  }
+}

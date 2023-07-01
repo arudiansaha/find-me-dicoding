@@ -1,0 +1,24 @@
+$color-primary-001: #1f2b47;
+$color-primary-002: #471f2b;
+$color-neutral-001: #13200e;
+$color-neutral-002: #ffffff;
+$color-neutral-003: #eaf4e6;
+
+$color-box-shadow: rgb(19, 32, 14, 0.2);
+
+$font-sans-family: (
+  "title" "Abril Fatface" cursive,
+  "body" "Josefin Sans" sans-serif,
+);
+
+$font-sizes: "xs" 0.75rem 1rem, "sm" 0.875rem 1.25rem, "md" 1rem 1.5rem, "lg" 1.125rem 1.75rem, "xl" 1.25rem 1.75rem, "2xl" 1.5rem 2rem, "3xl" 1.875rem 2.25rem, "4xl" 2.25rem 2.5rem, "5xl" 3rem 1, "6xl" 3.75rem 1, "7xl" 4.5rem 1, "8xl" 6rem 1, "9xl" 8rem 1;
+
+@media (prefers-color-scheme: dark) {
+  $color-primary-001: #471f2b;
+  $color-primary-002: #1f2b47;
+  $color-neutral-001: #ffffff;
+  $color-neutral-002: #13200e;
+  $color-neutral-003: #eaf4e6;
+
+  $color-box-shadow: rgb(255, 255, 255, 0.2);
+}

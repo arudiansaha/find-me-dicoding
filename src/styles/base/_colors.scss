@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+
+$colors: 'background'$color-neutral-002 $color-neutral-001, 'primary'$color-primary-001 $color-neutral-002, 'secondary'$color-neutral-003 $color-neutral-001, 'accent'$color-primary-002 $color-neutral-001, 'inverse'$color-neutral-001 $color-neutral-002;
+
+@mixin set-colors($value) {
+
+  @each $name,
+  $background-color,
+  $color in $colors {
+    @if $name ==$value {
+      background-color: $background-color;
+      color: $color;
+    }
+  }
+}

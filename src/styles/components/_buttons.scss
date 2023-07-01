@@ -1,0 +1,26 @@
+@use '../base/colors' as *;
+
+@mixin button-common() {
+  padding-block: 0.5em;
+  padding-inline: 1em;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+@mixin button-primary() {
+  @include button-common();
+  @include set-colors('primary');
+}
+
+@mixin button-secondary() {
+  @include button-common();
+  @include set-colors('secondary');
+}
+
+@mixin button-square() {
+  @include button-common();
+  @include set-colors('background');
+
+  padding: 1em;
+}

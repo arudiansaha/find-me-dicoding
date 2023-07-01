@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+@use '../components/buttons' as *;
+
+@use './typography' as *;
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-sans('title');
+}
+
+picture,
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  @include font-sans('body');
+  @include font-size('md');
+  @include set-colors('background');
+
+  position: relative;
+}
+
+header {
+  @include set-colors('background');
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1999;
+}
+
+.skip-link {
+  @include button-secondary();
+
+  position: absolute;
+  top: -48px;
+  left: 0;
+  z-index: 2001;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+.solid {
+  border-block-start: 2px solid $color-neutral-001;
+}
