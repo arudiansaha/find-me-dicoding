@@ -1,6 +1,7 @@
+@use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
-@use '../base/typography' as *;
 @use '../base/colors' as *;
+@use '../base/typography' as *;
 @use '../components/buttons' as *;
 
 .restaurant {
@@ -77,13 +78,7 @@
   }
 
   &__expandable {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 800ms ease-in-out;
-
-    &.expand {
-      grid-template-rows: 1fr;
-    }
+    @include expandable();
   }
 
   &__description {

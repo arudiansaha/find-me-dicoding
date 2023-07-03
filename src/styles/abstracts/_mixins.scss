@@ -3,3 +3,13 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin expandable {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 800ms ease-in-out;
+
+  &.expand {
+    grid-template-rows: 1fr;
+  }
+}

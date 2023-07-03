@@ -1,6 +1,6 @@
 {
     "id": "find-me-pwa-1",
-    "start_url": "/src/templates/index.html",
+    "start_url": "./index.html",
     "name": "Find Me Restaurant Searcher",
     "short_name": "Find Me",
     "description": "Best application to finding an best restaurant",

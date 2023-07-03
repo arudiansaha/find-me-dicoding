@@ -1,6 +1,7 @@
-@use '../base/typography' as *;
-@use '../base/colors' as *;
+@use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
+@use '../base/colors' as *;
+@use '../base/typography' as *;
 @use '../components/buttons' as *;
 
 .review {
@@ -24,7 +25,6 @@
     @include font-size('3xl');
 
     margin-block: 1.125rem;
-    text-align: center;
   }
 
   &__button {
@@ -44,7 +44,8 @@
     overflow: hidden;
   }
 
-  &__input {
+  &__input,
+  &__textarea {
     padding-block: 0.5em;
     padding-inline: 1em;
     border: 1px solid $color-neutral-001;
@@ -52,10 +53,6 @@
   }
 
   &__textarea {
-    padding-block: 0.5em;
-    padding-inline: 1em;
-    border: 1px solid $color-neutral-001;
-    border-radius: 0.5rem;
     resize: none;
   }
 
@@ -78,12 +75,6 @@
   }
 
   &__expandable {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 800ms ease-in-out;
-
-    &.expand {
-      grid-template-rows: 1fr;
-    }
+    @include expandable();
   }
 }
