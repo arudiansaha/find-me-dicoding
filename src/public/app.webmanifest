@@ -1,8 +1,8 @@
 {
-    "id": "find-me-pwa-1",
+    "id": "find-resto-pwa-1",
     "start_url": "./index.html",
-    "name": "Find Me Restaurant Searcher",
-    "short_name": "Find Me",
+    "name": "Find Resto",
+    "short_name": "Find Resto",
     "description": "Best application to finding an best restaurant",
     "display": "standalone",
     "background_color": "#ffffff",

@@ -12,7 +12,7 @@ const Home = {
 
   async afterRender() {
     const navbarElement = document.querySelector('nav-bar');
-    navbarElement.title = 'Find Me';
+    navbarElement.title = 'Find Resto';
 
     const restaurantListElement = document.querySelector('restaurant-list');
     const restaurants = await RestaurantApi.getRestaurants();
