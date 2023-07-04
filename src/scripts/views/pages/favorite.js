@@ -1,6 +1,5 @@
 import '../../components/restaurant-list';
-import RestaurantApi from '../../data/restaurant-api';
-import LocalState from '../../data/local-state';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const Favorite = {
   async render() {
@@ -12,15 +11,8 @@ const Favorite = {
     navbarElement.title = 'Favorite Restaurant';
 
     const restaurantListElement = document.querySelector('restaurant-list');
-    const restaurants = await RestaurantApi.getRestaurants();
-    const favorites = LocalState
-      .getData()
-      .filter(({ isFavorite }) => isFavorite)
-      .map(({ id }) => id);
-    const filteredRestaurant = restaurants
-      .filter(({ id }) => favorites.includes(id));
-
-    restaurantListElement.restaurants = filteredRestaurant;
+    const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    restaurantListElement.restaurants = restaurants;
     restaurantListElement.exploreTitle = 'Lovable Restaurants';
   },
 };

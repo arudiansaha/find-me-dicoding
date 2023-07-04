@@ -12,7 +12,6 @@ class RestaurantDetail extends HTMLElement {
 
   _renderPage() {
     const {
-      id,
       name,
       address,
       description,
@@ -177,15 +176,9 @@ class RestaurantDetail extends HTMLElement {
       </div>
     `;
 
-    const favoriteButtonElement = this.querySelector('.detail__favorite');
-    const settings = {
-      id,
-      isFavorite: favoriteButtonElement.classList.contains('active'),
-    };
-
     MakeFavorites.init({
-      settings,
-      button: favoriteButtonElement,
+      restaurant: this._restaurant,
+      button: this.querySelector('.detail__favorite'),
       outlineIcon: heartOutlineIcon,
       solidIcon: heartSolidIcon,
     });

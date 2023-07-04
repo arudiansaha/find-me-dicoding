@@ -1,43 +1,50 @@
-import LocalState from '../data/local-state';
+import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
 
 const MakeFavorites = {
-  init({
-    settings, button, outlineIcon, solidIcon,
+  async init({
+    restaurant, button, outlineIcon, solidIcon,
   }) {
-    const data = LocalState.getData().filter(({ id }) => id === settings.id)[0];
+    this._button = button;
+    this._outlineIcon = outlineIcon;
+    this._solidIcon = solidIcon;
+    this._restaurant = restaurant;
 
-    if (!data) LocalState.saveData(settings);
-    if (data && data.isFavorite) this._addIcon(button, solidIcon);
+    await this._renderButton();
+  },
 
-    button.addEventListener('click', () => {
-      if (button.classList.contains('active')) {
-        this._removeIcon(button, outlineIcon);
-        this._makeUnfavored(settings);
-      } else {
-        this._addIcon(button, solidIcon);
-        this._makeFavored(settings);
-      }
+  async _renderButton() {
+    const { id } = this._restaurant;
+
+    if (await this._isExisted(id)) {
+      this._renderFavored();
+    } else {
+      this._renderFavorite();
+    }
+  },
+
+  async _isExisted(id) {
+    const restaurant = await FavoriteRestaurantIdb.getRestaurant(id);
+    return !!restaurant;
+  },
+
+  _renderFavorite() {
+    this._button.classList.remove('active');
+    this._button.innerHTML = `${this._outlineIcon} Favorite`;
+
+    this._button.addEventListener('click', async () => {
+      await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
+      this._renderButton();
     });
   },
 
-  _addIcon(button, solidIcon) {
-    button.classList.add('active');
-    button.innerHTML = `${solidIcon} Favored`;
-  },
+  _renderFavored() {
+    this._button.classList.add('active');
+    this._button.innerHTML = `${this._solidIcon} Favored`;
 
-  _removeIcon(button, outlineIcon) {
-    button.classList.remove('active');
-    button.innerHTML = `${outlineIcon} Favorite`;
-  },
-
-  _makeFavored(settings) {
-    settings.isFavorite = true;
-    LocalState.saveData(settings);
-  },
-
-  _makeUnfavored(settings) {
-    settings.isFavorite = false;
-    LocalState.saveData(settings);
+    this._button.addEventListener('click', async () => {
+      await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
+      this._renderButton();
+    });
   },
 };
 
