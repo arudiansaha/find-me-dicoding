@@ -12,6 +12,7 @@
     },
     "rules": {
         "no-underscore-dangle": "off",
+        "no-restricted-globals": "off",
         "import/no-extraneous-dependencies": "off",
         "max-len": [
             "error",
