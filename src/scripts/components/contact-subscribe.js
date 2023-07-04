@@ -18,7 +18,7 @@ class ContactSubscribe extends HTMLElement {
         />
         <button class="contact__button" type="submit">Subscribe</button>
       </form>
-      <p class="contact__copyright">&copy; 2023 Find Me</p>
+      <p class="contact__copyright">&copy; 2023 Find Resto</p>
     `;
   }
 }
