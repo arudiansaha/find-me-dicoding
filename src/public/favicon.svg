@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="135.46667mm"
-   height="135.46664mm"
-   viewBox="0 0 135.46667 135.46664"
+   width="135.46666mm"
+   height="135.46674mm"
+   viewBox="0 0 135.46666 135.46674"
    version="1.1"
    id="svg5"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,23 +13,25 @@
      id="defs2" />
   <g
      id="layer1"
-     transform="translate(-248.87171,-58.085013)">
-    <rect
-       style="fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:0.55536;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:50;stroke-dasharray:none;stroke-opacity:1"
-       id="rect325"
-       width="135.46666"
-       height="135.46666"
-       x="248.87172"
-       y="58.085014" />
+     transform="translate(186.2667,-65.191946)">
+    <path
+       style="fill:#1f2b47;fill-opacity:1;stroke:#1f2b47;stroke-width:6.35;stroke-dasharray:none;stroke-opacity:1"
+       id="rect790"
+       width="129.11667"
+       height="129.11674"
+       x="-183.09171"
+       y="68.366943"
+       d="m -144.3567,68.366943 h 51.64664 a 38.735023,38.735023 45 0 1 38.735023,38.735027 l 0,51.64672 a 38.735001,38.735001 135 0 1 -38.735,38.735 h -51.646643 a 38.735023,38.735023 45 0 1 -38.73503,-38.73503 v -51.64672 a 38.735001,38.735001 135 0 1 38.73501,-38.734997 z" />
     <text
        xml:space="preserve"
-       style="font-size:40.1496px;fill:#000000;stroke-width:0.209112"
-       x="254.55386"
-       y="138.34502"
-       id="text113"><tspan
-         id="tspan111"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.1496px;font-family:Pacifico;-inkscape-font-specification:'Pacifico, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.209112"
-         x="254.55386"
-         y="138.34502">find me</tspan></text>
+       style="font-size:3.03587px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.07176"
+       x="-170.79605"
+       y="153.4754"
+       id="text1569"
+       transform="scale(1.0000247,0.99997531)"><tspan
+         id="tspan1567"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.574px;font-family:Pacifico;-inkscape-font-specification:'Pacifico, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.07176"
+         x="-170.79605"
+         y="153.4754">resto</tspan></text>
   </g>
 </svg>
