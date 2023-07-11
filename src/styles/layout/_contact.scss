@@ -5,7 +5,9 @@
 .contact {
   @include set-colors('inverse');
 
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: min(1024px, 100% - 3rem);
   margin-block: 2rem;
   margin-inline: auto;
@@ -15,31 +17,19 @@
   &__title {
     @include font-size('xl');
 
+    width: 100%;
     margin-block: 0.5rem;
   }
 
-  &__form {
-    display: flex;
-    align-items: center;
-  }
-
-  &__input {
-    width: 100%;
-    padding-block: 0.5em;
-    padding-inline: 1em;
-    border: none;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
-
   &__button {
-    @include button-primary();
+    @include button-secondary();
 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    width: 100%;
 
-    &:active {
-      filter: brightness(1.25);
+    &-unsubscribe {
+      @include button-primary();
+
+      width: 100%;
     }
   }
 
@@ -53,7 +43,8 @@
   .contact {
 
     &__title,
-    &__form {
+    &__button,
+    &__button-unsubscribe {
       width: 60%;
       margin-inline: auto;
     }

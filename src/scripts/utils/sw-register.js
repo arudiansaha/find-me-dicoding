@@ -3,6 +3,7 @@ import * as WorkboxWindow from 'workbox-window';
 const swRegister = async () => {
   if (!('serviceWorker' in navigator)) {
     console.log('Service worker not supported in this browser');
+    return;
   }
 
   const wb = new WorkboxWindow.Workbox('./sw.bundle.js');

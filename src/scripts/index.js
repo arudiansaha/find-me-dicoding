@@ -13,8 +13,8 @@ window.addEventListener('hashchange', () => {
   appShell.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   appShell.renderPage();
-  swRegister();
+  await swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });

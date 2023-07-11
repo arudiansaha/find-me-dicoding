@@ -1,5 +1,4 @@
 import NotificationHelper from './notification-helper';
-import CONFIG from '../globals/config';
 
 const WebSocketInitiator = {
   init(url) {
@@ -11,10 +10,9 @@ const WebSocketInitiator = {
     const restaurant = JSON.parse(message.data);
 
     NotificationHelper.sendNotification({
-      title: `${restaurant.name} is on the list!`,
+      title: `${restaurant.title} is on the list!`,
       options: {
-        body: restaurant.description,
-        image: `${CONFIG.BASE_IMAGE_URL}/medium/${restaurant.pictureId}`,
+        body: restaurant.overview,
       },
     });
   },
