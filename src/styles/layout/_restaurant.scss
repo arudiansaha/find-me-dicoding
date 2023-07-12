@@ -70,7 +70,7 @@
   &__title {
     @include font-size('xl');
 
-    margin-block: 0.5rem;
+    padding-block: 0.75rem;
   }
 
   &__city {

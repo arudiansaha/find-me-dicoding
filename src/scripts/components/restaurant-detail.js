@@ -148,7 +148,13 @@ class RestaurantDetail extends HTMLElement {
         <div class="review">
           <div class="review__header">
             <h2 class="review__title">Customer Reviews</h2>
-            <button class="review__button" type="button">${pencilIcon}</button>
+            <button
+              class="review__button"
+              type="button"
+              aria-label="Write review"
+            >
+              ${pencilIcon}
+            </button>
           </div>
           <div class="review__expandable">
             <form class="review__form" id="reviewForm">

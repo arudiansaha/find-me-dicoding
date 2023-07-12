@@ -56,6 +56,7 @@ class RestaurantItem extends HTMLElement {
       <button
         class="restaurant__button"
         type="button"
+        aria-label="Expand restaurant description"
       >
         ${chevronIcon}
       </button>

@@ -1,8 +1,8 @@
 @use '../base/colors' as *;
 
 @mixin button-common() {
-  padding-block: 0.5em;
-  padding-inline: 1em;
+  padding-block: 0.875em;
+  padding-inline: 1.25em;
   border: none;
   border-radius: 0.25em;
   cursor: pointer;
