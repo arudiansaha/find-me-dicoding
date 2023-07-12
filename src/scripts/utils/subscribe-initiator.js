@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import CONFIG from '../globals/config';
 import NotificationHelper from './notification-helper';
 

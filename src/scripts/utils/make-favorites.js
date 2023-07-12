@@ -29,7 +29,7 @@ const MakeFavorites = {
 
   _renderFavorite() {
     this._button.classList.remove('active');
-    this._button.innerText = `${this._outlineIcon} Favorite`;
+    this._button.innerHTML = `${this._outlineIcon} Favorite`;
 
     this._button.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
@@ -39,7 +39,7 @@ const MakeFavorites = {
 
   _renderFavored() {
     this._button.classList.add('active');
-    this._button.innerText = `${this._solidIcon} Favored`;
+    this._button.innerHTML = `${this._solidIcon} Favored`;
 
     this._button.addEventListener('click', async () => {
       await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);

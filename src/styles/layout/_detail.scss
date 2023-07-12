@@ -113,30 +113,3 @@
     }
   }
 }
-
-// @media (min-width: 1280px) {
-//   .detail {
-//     position: relative;
-//     height: fit-content;
-
-//     &__image {
-//       @include image-size('md');
-//     }
-
-//     &__favorite {
-//       &:is(:active, :hover) {
-//         transform: scale(1.1);
-//         transition: all 300ms ease-in-out;
-//       }
-//     }
-
-//     &__info {
-//       @include set-colors('background');
-
-//       margin-block: 0;
-//       padding: 1rem;
-//       border-radius: 0.5rem;
-//       box-shadow: 0 0 15px -3px $color-box-shadow, 0 2px 4px -2px $color-box-shadow;
-//     }
-//   }
-// }

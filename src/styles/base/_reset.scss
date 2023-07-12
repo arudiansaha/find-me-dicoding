@@ -63,12 +63,13 @@ header {
   @include button-secondary();
 
   position: absolute;
-  top: -48px;
+  top: -64px;
   left: 0;
   z-index: 2001;
 
   &:focus {
-    top: 0;
+    top: 10px;
+    left: 10px;
   }
 }
 
