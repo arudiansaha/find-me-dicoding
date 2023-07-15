@@ -26,6 +26,16 @@ module.exports = merge(common, {
     new WorkWebpackPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
       swDest: './sw.bundle.js',
+      include: [
+        '**/*.js',
+        '**/*.html',
+        '**/*.css',
+        '**/*.json',
+        '**/*.svg',
+        '**/*.png',
+        '**/*.gif',
+        '**/*.txt',
+      ],
     }),
   ],
 });
