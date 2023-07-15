@@ -35,7 +35,7 @@ class RestaurantItem extends HTMLElement {
           <p class="restaurant__score">${rating.toFixed(1)}</p>
         </div>
         <img
-          src="${CONFIG.BASE_IMAGE_URL}/medium/${pictureId}"
+          src="${CONFIG.BASE_IMAGE_URL}/small/${pictureId}"
           alt="${name}"
           class="restaurant__image"
           loading="lazy"
@@ -66,9 +66,9 @@ class RestaurantItem extends HTMLElement {
     const percentage = (rating / 5.0) * 100;
     let color = '';
 
-    if (percentage <= 2.0) color = '#e74c3c';
-    if (percentage <= 3.5) color = '#f1c40f';
-    if (percentage > 3.5) color = '#27ae60';
+    if (percentage <= 2.0) color = '#7f1d1d';
+    if (percentage <= 3.5) color = '#78350f';
+    if (percentage > 3.5) color = '#365314';
 
     scoreELement.style.color = color;
 

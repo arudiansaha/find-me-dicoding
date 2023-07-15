@@ -40,12 +40,23 @@ class NavBar extends HTMLElement {
 
     this.setAttribute('class', 'navbar');
     this.innerHTML = `
-      <button class="navbar__button" id="hamburgerButton">
+      <button 
+        class="navbar__button" 
+        id="hamburgerButton" 
+        aria-label="Open sidebar"
+      >
         ${hamburgerIcon}
       </button>
       <h1 class="navbar__title">${this._title}</h1>
       <nav class="navbar__drawer" id="navigationDrawer">
-        <button class="navbar__button" id="xMarkButton">${xMarkIcon}</button>
+        <button
+          class="navbar__button"
+          id="xMarkButton"
+          aria-label="Close
+          sidebar"
+        >
+          ${xMarkIcon}
+        </button>
         <ul class="navbar__list">
           <li class="navbar__item">
             <a href="#/home" class="navbar__link">Home</a>
