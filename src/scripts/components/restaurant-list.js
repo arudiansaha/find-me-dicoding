@@ -22,6 +22,8 @@ class RestaurantList extends HTMLElement {
       const restaurantListELement = document.querySelector('.restaurant__list');
       const restaurantItemElement = document.createElement('restaurant-item');
       restaurantItemElement.restaurant = restaurant;
+
+      if (restaurantListELement === null) return;
       restaurantListELement.appendChild(restaurantItemElement);
     });
   }

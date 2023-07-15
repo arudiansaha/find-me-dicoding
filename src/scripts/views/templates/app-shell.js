@@ -13,6 +13,12 @@ class AppShell {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    const skipLinkElement = document.querySelector('.skip-link');
+    skipLinkElement.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.getElementById('mainContent').focus();
+    });
   }
 }
 

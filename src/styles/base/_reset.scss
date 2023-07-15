@@ -73,6 +73,10 @@ header {
   }
 }
 
+#mainContent:focus {
+  outline: 0;
+}
+
 .solid {
   border-block-start: 2px solid $color-neutral-001;
 }
