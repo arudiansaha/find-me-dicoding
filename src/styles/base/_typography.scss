@@ -3,19 +3,14 @@
 @font-face {
   font-family: 'Abril Fatface';
   src: url('/src/public/fonts/AbrilFatface-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Josefin Sans';
   src: url('/src/public/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
   font-weight: 400 700;
-}
-
-@font-face {
-  font-family: 'Josefin Sans';
-  src: url('/src/public/fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: 400 700;
-  font-style: italic;
+  font-display: swap;
 }
 
 @mixin font-size($value) {

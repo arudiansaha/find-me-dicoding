@@ -6,7 +6,17 @@ class HeroImages extends HTMLElement {
   _renderPage() {
     this.setAttribute('class', 'hero');
     this.innerHTML = `
-      <img src="./images/heros/hero-image_2.jpg" alt="hero image" class="hero__image">
+      <picture>
+        <source
+          media="(min-width: 600px)"
+          srcset="./images/heros/hero-image-large.jpg"
+        >
+        <img
+          src="./images/heros/hero-image-small.jpg"
+          alt="Hero image"
+          class="hero__image"
+        >
+      </picture>
     `;
   }
 }

@@ -2,6 +2,8 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
 import './components/nav-bar';
 import './components/contact-subscribe';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import AppShell from './views/templates/app-shell';
 import swRegister from './utils/sw-register';
 import CONFIG from './globals/config';

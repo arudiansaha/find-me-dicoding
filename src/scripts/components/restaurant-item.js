@@ -35,10 +35,9 @@ class RestaurantItem extends HTMLElement {
           <p class="restaurant__score">${rating.toFixed(1)}</p>
         </div>
         <img
-          src="${CONFIG.BASE_IMAGE_URL}/small/${pictureId}"
+          data-src="${CONFIG.BASE_IMAGE_URL}/small/${pictureId}"
           alt="${name}"
-          class="restaurant__image"
-          loading="lazy"
+          class="restaurant__image lazyload"
         >
       </div>
       <div class="restaurant__content">
