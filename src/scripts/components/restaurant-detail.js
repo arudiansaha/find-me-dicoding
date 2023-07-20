@@ -85,12 +85,22 @@ class RestaurantDetail extends HTMLElement {
 
     this.setAttribute('class', 'detail');
     this.innerHTML = `
-      <img
-        src="${CONFIG.BASE_IMAGE_URL}/large/${pictureId}"
-        alt="${name}"
-        class="detail__image"
-        loading="lazy"
-      />
+      <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="${CONFIG.BASE_IMAGE_URL}/small/${pictureId}"
+        />
+        <source
+          media="(max-width: 900px)"
+          srcset="${CONFIG.BASE_IMAGE_URL}/medium/${pictureId}"
+        />
+        <img
+          src="${CONFIG.BASE_IMAGE_URL}/large/${pictureId}"
+          alt="${name}"
+          class="detail__image"
+          loading="lazy"
+        />
+      </picture>
       <div class="detail__content">
         <button
           class="detail__favorite"
@@ -105,11 +115,11 @@ class RestaurantDetail extends HTMLElement {
           <hr class="solid">
           <div class="detail__menus">
             <div>
-              <h3>Drinks</h3>
+              <h2>Drinks</h2>
               <ul>${drinksElement}</ul>
             </div>
             <div>
-              <h3>Foods</h3>
+              <h2>Foods</h2>
               <ul>${foodsElement}</ul>
             </div>
           </div>
