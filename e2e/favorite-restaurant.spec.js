@@ -9,12 +9,12 @@ Before(({ I }) => {
 
 Scenario('showing empty favorite restaurants', ({ I }) => {
   I.seeElement('restaurant-list');
-  I.see('', '.restaurant__list');
+  I.dontSeeElement('restaurant-item');
 });
 
 Scenario('Make a restaurant as favorite', async ({ I }) => {
   I.seeElement('restaurant-list');
-  I.see('', '.restaurant__list');
+  I.dontSeeElement('restaurant-item');
 
   I.amOnPage('/');
   I.waitForElement('.restaurant__link', 30);
@@ -37,7 +37,7 @@ Scenario('Make a restaurant as favorite', async ({ I }) => {
 
 Scenario('Remove a restaurant from favorite', async ({ I }) => {
   I.seeElement('restaurant-list');
-  I.see('', '.restaurant__list');
+  I.dontSeeElement('restaurant-item');
 
   I.amOnPage('/');
   I.waitForElement('.restaurant__link', 30);
@@ -64,5 +64,5 @@ Scenario('Remove a restaurant from favorite', async ({ I }) => {
   I.click('.detail__favorite');
 
   I.amOnPage('/#/favorite');
-  I.see('', '.restaurant__list');
+  I.dontSeeElement('restaurant-item');
 });
